@@ -1,5 +1,5 @@
 const Listing = require('../models/listing');
-
+const User = require('../models/users');
 module.exports.index = async (req,res) => {
     const allListings = await Listing.find();
     res.render("./listings/index.ejs",{allListings});
@@ -15,7 +15,7 @@ module.exports.showListing = async (req,res) => {
         req.flash("error","Listing not found!!");
         res.redirect("/listing");
     }
-    console.log(listing);
+    console.log(listing.owner);
     res.render("./listings/show.ejs",{listing});
 }
 module.exports.createListing = async (req,res) => {
