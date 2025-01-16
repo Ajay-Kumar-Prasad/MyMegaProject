@@ -1,10 +1,7 @@
-if(process.env.NODE_ENV != "production"){
-    require('dotenv').config();
-}
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
 const mongoose = require("mongoose");
+const myDbUrl = process.env.ATLASDB_URL;
 const initData = require("../init/data.js");
-
-const myDB_URL = process.env.ATLASDB_URL;
 const Listing = require("../models/listing.js");
 main()
     .then(()=>{
@@ -12,7 +9,7 @@ main()
     })
     .catch(err => console.log(err));
 async function main() {
-  await mongoose.connect(myDB_URL);
+  await mongoose.connect(myDbUrl);
 }
 const initDb = async () => {
     await Listing.deleteMany({});
