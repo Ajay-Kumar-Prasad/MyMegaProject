@@ -2,3 +2,7 @@ I recently made a website as a part of my learning using node.js,express.js and 
 
 Website link- https://my-megaproject.onrender.com
 
+Note:Once you open the link in your browser,you may find page not found...To visit the home oage ,click on the icon on the top left corner.
+
+Note:Development In progress...
+
