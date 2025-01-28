@@ -18,6 +18,48 @@ body{
 .nav-link{
     color:#222222 !important;
 }
+.nav-link-btn{
+    opacity: 0.7;
+    font-size: 1.2rem !important;
+    border-radius: 25px !important;
+    color: #222222 !important;
+    background-color: white !important;
+    border-width: 0.05rem !important;
+}
+.nav-list{
+    border-color: #ebebeb !important;
+    border-radius: 10px !important;
+    height: 15rem !important;
+    width: 15rem !important;
+}
+.nav-lang-icon{
+    padding-top: 0.6rem;
+    padding-left: 0.5rem;
+    padding-right: 0.8rem;
+    font-size: 1rem;
+}
+/* filters for icons */
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.filter{
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+.filter:hover {
+    opacity:1;
+    cursor: pointer;
+}
+.filter-icon{
+    color: black;
+}
+.filter p{
+    font-size: 0.8rem;
+}
 .f-info-links a{
     text-decoration: none;
     color: #222222;

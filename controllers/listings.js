@@ -4,6 +4,14 @@ module.exports.index = async (req,res) => {
     const allListings = await Listing.find();
     res.render("./listings/index.ejs",{allListings});
 }
+module.exports.listByType = async (req,res) => {
+    const { type } = req.query;
+    console.log("hello");
+    const filter = type ? {listType: type} : {};
+    console.log(filter);
+    const allListings = await Listing.find(filter);
+    res.render("./listings/listType.ejs",{allListings,type});
+}
 module.exports.renderNewForm = (req,res) => {
     console.log(req.user);
     res.render("./listings/new.ejs");

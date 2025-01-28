@@ -12,7 +12,7 @@ async function main() {
   await mongoose.connect(myDbUrl);
 }
 const initDb = async () => {
-    await Listing.deleteMany({});
+    await Listing.deleteMany({});   
     initData.data = initData.data.map((obj) => ({
         ...obj, owner:"6787fb7de91383027652802a",
     }));

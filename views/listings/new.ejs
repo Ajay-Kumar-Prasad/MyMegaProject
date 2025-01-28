@@ -12,7 +12,28 @@
             <div class="valid-feedback">Looks good!</div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea name="listing[description]" placeholder="" class="form-control"></textarea><br><br>
+                <textarea name="listing[description]" placeholder="" class="form-control"></textarea><br>
+            </div>
+            <div class="mb-3">
+                <label for="listType" class="form-label">List Type</label>
+                <select
+                    name="listing[listType]"
+                    class="form-select form-select-sm"
+                    aria-label="Select List Type"
+                    required>
+                    <option value="" selected disabled>Select ListType</option>
+                    <option value="Rooms">Rooms</option>
+                    <option value="Iconic cities">Iconic cities</option>
+                    <option value="Beachfront">Beachfront</option>
+                    <option value="Mountains">Mountains</option>
+                    <option value="Castles">Castles</option>
+                    <option value="Amazing pools">Amazing pools</option>
+                    <option value="Camping">Camping</option>
+                    <option value="Farms">Farms</option>
+                    <option value="Arctic">Arctic</option>
+                    <option value="Domes">Domes</option>
+                    <option value="Boats">Boats</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label for="image" class="form-label">Upload Image</label>

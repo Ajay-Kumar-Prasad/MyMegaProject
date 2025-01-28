@@ -13,6 +13,9 @@ router.route("/")
 .get(wrapAsync(listingController.index))
 .post(isLoggedIn,upload.single('listing[image]'),wrapAsync(listingController.createListing));
 
+//SHOW ALL LISTS BY TYPE
+router.route("/type")
+.get(wrapAsync(listingController.listByType));
 
 //NEW ROUTE
 router.get("/new",isLoggedIn,listingController.renderNewForm);
