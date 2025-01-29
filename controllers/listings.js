@@ -1,16 +1,28 @@
 const Listing = require('../models/listing');
 const User = require('../models/users');
+const { all } = require('../routes/listing');
 module.exports.index = async (req,res) => {
     const allListings = await Listing.find();
     res.render("./listings/index.ejs",{allListings});
 }
 module.exports.listByType = async (req,res) => {
     const { type } = req.query;
-    console.log("hello");
     const filter = type ? {listType: type} : {};
-    console.log(filter);
     const allListings = await Listing.find(filter);
     res.render("./listings/listType.ejs",{allListings,type});
+}
+module.exports.searchItems = async(req,res) => {
+    const { query } = req.query;
+    if(!query) return redirect('/listing');
+    const allListings = await Listing.find({
+        $or: [ //or is a mongodb operator that checks atleast one of the given condition is true
+            { title: new RegExp(query, 'i') }, ///regExp is a construct used to search a keyword.. i is a flag that makes the search case insensitive
+            { description: new RegExp(query, 'i') },
+            { location: new RegExp(query, 'i') },
+            { country: new RegExp(query, 'i') }
+        ]
+    });
+    res.render("./listings/listType.ejs", { allListings });
 }
 module.exports.renderNewForm = (req,res) => {
     console.log(req.user);

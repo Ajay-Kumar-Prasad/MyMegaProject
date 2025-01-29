@@ -13,9 +13,13 @@ router.route("/")
 .get(wrapAsync(listingController.index))
 .post(isLoggedIn,upload.single('listing[image]'),wrapAsync(listingController.createListing));
 
-//SHOW ALL LISTS BY TYPE
+//SHOW ALL LISTS BY TYPE ROUTE
 router.route("/type")
 .get(wrapAsync(listingController.listByType));
+
+//SEARCH RESULTS ROUTE
+router.route("/search")
+.get(wrapAsync(listingController.searchItems));
 
 //NEW ROUTE
 router.get("/new",isLoggedIn,listingController.renderNewForm);

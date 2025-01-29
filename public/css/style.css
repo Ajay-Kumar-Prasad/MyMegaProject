@@ -107,8 +107,16 @@ body{
     width: 100% !important;
     object-fit: cover !important;
 }
+.card-details{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 6rem;
+}
+.card-price{
+    margin: 2rem !important;
+}
 .card-body{
-    padding: 0 !important;
+    padding: 1rem 0 0 0 !important;
 }
 .card-text p {
     font-weight: 400 !important;
