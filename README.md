@@ -50,12 +50,12 @@ This project was created to:
 
 Clone the repository
 ```
-git clone https://github.com/<your-username>/airbnb-clone.git
+git clone https://github.com/Ajay-Kumar-Prasad/MyMegaProject.git
 ```
 
 Navigate to the project folder
 ```
-cd airbnb-clone
+cd MEGAPROJECT
 ```
 
 Install dependencies
