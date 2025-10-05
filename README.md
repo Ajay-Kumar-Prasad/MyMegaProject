@@ -1,6 +1,10 @@
 # Website link
  https://my-megaproject.onrender.com
 
+# Screenshots
+![alt text](./assets/image.png)
+![alt text](./assets/image-1.png)
+
  # 🏡 My Airbnb Clone
 
 A simple Airbnb Clone website built while learning backend web development using Node.js, Express.js, and MongoDB.
