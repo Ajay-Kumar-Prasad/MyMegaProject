@@ -66,7 +66,7 @@ npm install
 Setup environment variables
 Create a .env file in the root directory and add:
 ```
-PORT=5000
+PORT=8080
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
@@ -84,14 +84,17 @@ http://localhost:5000
 ```
 Airbnb-Clone/
 │
-├── models/         # MongoDB models (User, Property, Booking, Review)
-├── routes/         # Express routes for APIs
+├── assets/         # images
 ├── controllers/    # Business logic for each route
-├── middleware/     # Authentication and error-handling middleware
-├── views/          # EJS templates (if applicable)
+├── init/           # index.js, data.js
+├── middlewares/    # middleware.js
+├── models/         # MongoDB models (User, Listing, Review)
 ├── public/         # Static files (CSS, images, JS)
-├── .env            # Environment variables
-├── server.js       # Main server entry point
+├── routes/         # Express routes for APIs
+├── utils/          # ExpressError.js, wrapAsync.js
+├── views/          # EJS templates
+├── app.js          # Main server entry point
+├── cloudConfig.js  # cloudinary
 └── package.json
 ```
 
