@@ -78,7 +78,7 @@ npm start
 
 Open your browser and visit
 
-http://localhost:5000
+http://localhost:8080
 
 # 📂 Folder Structure
 ```
